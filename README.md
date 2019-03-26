@@ -11,7 +11,9 @@ Converts an argus isdn text trace into a wireshark capture file (aka eyesdn)
 
 ## Example
 
-`#> head print.txt
+```
+
+#> head print.txt
 This file was created from the following program:
 WINanalyse Version: 3.14.060219
 Date: 26.03.2019  10:29
@@ -31,4 +33,4 @@ Tracefile: ArgusTrace2.itf
  19   0.941000         User -> Network      Q.931 15 TEI:65 I, N(R)=2, N(S)=1 | STATUS
  21   0.942000      Network -> User         Q.931 8 TEI:65 I, N(R)=2, N(S)=2 | RELEASE COMPLETE
 
-`
+```
