@@ -2,7 +2,7 @@
 Converts an argus isdn text trace into a wireshark capture file (aka eyesdn)
 
 ## Requirements
-- g++7 or newer (using -std=c++17)
+- g++7 or newer (using -std=c++17), and a linux host for now
 - WinAnalyze from Intec GmbH with a valid license file to export .itf as textual trace
 
 ## Caveats
@@ -11,15 +11,18 @@ Converts an argus isdn text trace into a wireshark capture file (aka eyesdn)
 
 ## Example
 
+First, from WinAnalyse, select File - Export Trace and save the file as
+trace.txt. This requires you to have a valid license for WinAnalyse.
+
 ```
 
-#> head print.txt
+#> head trace.txt
 This file was created from the following program:
 WINanalyse Version: 3.14.060219
 Date: 26.03.2019  10:29
 Tracefile: ArgusTrace2.itf
 
-#>  ~/src/argus2pcap/bin/a2w print.txt out.pcap
+#>  ~/src/argus2pcap/bin/a2w trace.txt out.pcap
 
 #> tshark -r out.pcap q931 |head
   3   0.005000         User -> Network      Q.931 15 TEI:66 I, N(R)=1, N(S)=0 | CALL PROCEEDING
