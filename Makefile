@@ -7,8 +7,8 @@ all: a2w
 .PHONY: clean
 
 clean: 
-	@rm -f bin/a2w
-	@rm -f obj/*.o
+	@rm -fr bin
+	@rm -fr obj
 
 a2w: bin obj bin/a2w 
 
